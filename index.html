@@ -115,7 +115,7 @@
             <p>North India's Tallest Iconic Twin Towers.</p>
             <p>3 Sides Open Corner Plot.</p>
           </div>
-          <img class="highlight-media" src="assets/images/highlight_1.webp" alt="Glass facade and sphere feature">
+          <img class="highlight-media" src="assets/images/highlight_3.webp" alt="Glass facade and sphere feature">
         </div>
 
         <div class="highlight-row reverse">
@@ -135,7 +135,7 @@
             <p>Surrounded by 1 Lakh+ Ready Apartments.</p>
             <p>Bang on Noida-Greater Noida Expressway.</p>
           </div>
-          <img class="highlight-media" src="assets/images/highlight_3.webp" alt="Cyberthum towers exterior view">
+          <img class="highlight-media" src="assets/images/highlight_1_3.webp" alt="Cyberthum towers exterior view">
         </div>
       </div>
     </section>
@@ -390,8 +390,19 @@
           status.classList.add(result.ok ? 'is-success' : 'is-error');
 
           if (result.ok) {
+            if (result.download_url) {
+              const downloadLink = document.createElement('a');
+              downloadLink.href = result.download_url;
+              downloadLink.download = '';
+              document.body.appendChild(downloadLink);
+              downloadLink.click();
+              downloadLink.remove();
+            }
+
             form.reset();
-            window.location.href = 'thankyou.html';
+            setTimeout(() => {
+              window.location.href = 'thankyou';
+            }, result.download_url ? 700 : 0);
           }
         } catch (error) {
           status.textContent = 'Unable to send your details right now. Please try again later.';

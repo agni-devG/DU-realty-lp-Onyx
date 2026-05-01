@@ -7,10 +7,10 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 header('Content-Type: application/json');
 
-function respond(bool $ok, string $message, int $status = 200): void
+function respond(bool $ok, string $message, int $status = 200, array $data = []): void
 {
     http_response_code($status);
-    echo json_encode(['ok' => $ok, 'message' => $message]);
+    echo json_encode(array_merge(['ok' => $ok, 'message' => $message], $data));
     exit;
 }
 
@@ -77,6 +77,10 @@ $labels = [
 
 $subject = 'New Site Visit Lead';
 $leadLabel = $labels[$leadType] ?? $labels['site_visit'];
+$downloadUrls = [
+    'brochure' => 'assets/downloads/cyberthum_brochure.pdf',
+    'floor_plan' => 'assets/downloads/Cyberthun_floor_plan.pdf',
+];
 
 $body = '
   <h2>New Lead - ' . htmlspecialchars($leadLabel, ENT_QUOTES, 'UTF-8') . '</h2>
@@ -118,7 +122,9 @@ try {
     $mail->AltBody = $plainBody;
 
     $mail->send();
-    respond(true, 'Thank you. We will contact you soon.');
+    respond(true, 'Thank you. We will contact you soon.', 200, [
+        'download_url' => $downloadUrls[$leadType] ?? null,
+    ]);
 } catch (Exception $exception) {
     log_mail_error('PHPMailer error: ' . $exception->getMessage() . ' | ' . $mail->ErrorInfo);
     respond(false, 'Unable to send your details right now. Please try again later.', 500);
