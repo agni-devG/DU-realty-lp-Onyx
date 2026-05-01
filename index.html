@@ -49,7 +49,7 @@
       <div class="visit-modal__dialog" role="dialog" aria-modal="true" aria-label="Claim your free site visit">
         <button class="visit-modal__close" type="button" aria-label="Close site visit form" data-visit-close><img src="assets/images/icon-close.svg" alt=""></button>
         <h2 data-visit-title>Claim Your<br>Free Site Visit!</h2>
-        <form class="lead-form visit-form" action="api/send-lead.php" method="post" data-lead-form>
+        <form class="lead-form visit-form" action="api/send-lead" method="post" data-lead-form>
           <input type="hidden" name="lead_type" value="site_visit" data-lead-type>
           <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off">
           <label>
@@ -83,7 +83,7 @@
           <p>Sector 142, Noida</p>
         </div>
 
-        <form class="lead-form" action="api/send-lead.php" method="post" data-lead-form>
+        <form class="lead-form" action="api/send-lead" method="post" data-lead-form>
           <input type="hidden" name="lead_type" value="site_visit">
           <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off">
           <label>
@@ -235,7 +235,7 @@
             </div>
           </div>
 
-          <form class="lead-form contact-form" action="api/send-lead.php" method="post" data-lead-form>
+          <form class="lead-form contact-form" action="api/send-lead" method="post" data-lead-form>
             <input type="hidden" name="lead_type" value="contact">
             <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off">
             <h3>Book Your<br>Visit Today</h3>
