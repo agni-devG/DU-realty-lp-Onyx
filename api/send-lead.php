@@ -7,16 +7,39 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 header('Content-Type: application/json');
 
-require __DIR__ . '/../vendor/autoload.php';
-
-$config = require __DIR__ . '/mail-config.php';
-
 function respond(bool $ok, string $message, int $status = 200): void
 {
     http_response_code($status);
     echo json_encode(['ok' => $ok, 'message' => $message]);
     exit;
 }
+
+function log_mail_error(string $message): void
+{
+    $line = '[' . date('Y-m-d H:i:s') . '] ' . $message . PHP_EOL;
+    $written = @error_log($line, 3, __DIR__ . '/mail-error.log');
+
+    if (!$written) {
+        error_log($line);
+    }
+}
+
+$autoloadPath = __DIR__ . '/../vendor/autoload.php';
+$configPath = __DIR__ . '/mail-config.php';
+
+if (!is_file($autoloadPath)) {
+    log_mail_error('Missing Composer autoload file. Upload vendor/ or run composer install on hosting.');
+    respond(false, 'Unable to send your details right now. Please try again later.', 500);
+}
+
+if (!is_file($configPath)) {
+    log_mail_error('Missing api/mail-config.php. Create it from api/mail-config.example.php on hosting.');
+    respond(false, 'Unable to send your details right now. Please try again later.', 500);
+}
+
+require $autoloadPath;
+
+$config = require $configPath;
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     respond(false, 'Invalid request method.', 405);
@@ -97,5 +120,9 @@ try {
     $mail->send();
     respond(true, 'Thank you. We will contact you soon.');
 } catch (Exception $exception) {
+    log_mail_error('PHPMailer error: ' . $exception->getMessage() . ' | ' . $mail->ErrorInfo);
+    respond(false, 'Unable to send your details right now. Please try again later.', 500);
+} catch (Throwable $throwable) {
+    log_mail_error('Server error: ' . $throwable->getMessage());
     respond(false, 'Unable to send your details right now. Please try again later.', 500);
 }
