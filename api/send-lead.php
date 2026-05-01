@@ -78,8 +78,8 @@ $labels = [
 $subject = 'New Site Visit Lead';
 $leadLabel = $labels[$leadType] ?? $labels['site_visit'];
 $downloadUrls = [
-    'brochure' => 'assets/downloads/cyberthum_brochure.pdf',
-    'floor_plan' => 'assets/downloads/Cyberthun_floor_plan.pdf',
+    'brochure' => 'assets/downloads/onyx_brochure.pdf',
+    'floor_plan' => 'assets/downloads/onyx_floor_plan.pdf',
 ];
 
 $body = '
