@@ -1,0 +1,25 @@
+# Secrets and local environment config
+api/mail-config.php
+.env
+.env.*
+!.env.example
+
+# Composer dependencies are installed from composer.json/composer.lock
+vendor/
+
+# Logs and runtime output
+*.log
+logs/
+tmp/
+temp/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Local build/cache folders
+.cache/
+node_modules/

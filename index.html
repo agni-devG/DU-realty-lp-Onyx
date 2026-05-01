@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhutani Cyberthum</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/gpm2ftc.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="top-bar__track">
+        <span><span class="cofo-span">ONYX</span>, Sector 142, Noida.</span>
+        <span class="divider"></span>
+        <span>Book My Free Visit.</span>
+        <span class="divider"></span>
+        <span>Call Now - 9810198351, 9605970555.</span>
+      </div>
+      <div class="top-bar__track" aria-hidden="true">
+        <span><span class="cofo-span">ONYX</span>, Sector 142, Noida.</span>
+        <span class="divider"></span>
+        <span>Book My Free Visit.</span>
+        <span class="divider"></span>
+        <span>Call Now - 9810198351, 9605970555.</span>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <a class="logo" href="#" aria-label="Bhutani home">
+        <img src="assets/images/logo.svg" alt="Bhutani Infra Innovation">
+      </a>
+
+      <div class="nav-links">
+        <a href="#highlights">Project Highlights</a>
+        <a href="#video">Video</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#downloads">Downloads</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a class="nav-button" href="#contact" data-visit-open data-visit-heading="Claim Your<br>Free Site Visit!">Book My Free Visit</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="visit-modal" data-visit-modal aria-hidden="true">
+      <button class="visit-modal__backdrop" type="button" aria-label="Close site visit form" data-visit-close></button>
+      <div class="visit-modal__dialog" role="dialog" aria-modal="true" aria-label="Claim your free site visit">
+        <button class="visit-modal__close" type="button" aria-label="Close site visit form" data-visit-close><img src="assets/images/icon-close.svg" alt=""></button>
+        <h2 data-visit-title>Claim Your<br>Free Site Visit!</h2>
+        <form class="lead-form visit-form" action="api/send-lead.php" method="post" data-lead-form>
+          <input type="hidden" name="lead_type" value="site_visit" data-lead-type>
+          <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off">
+          <label>
+            <span>Name <abbr class="required-star" title="required">*</abbr></span>
+            <input type="text" name="name" placeholder="Akshat Dixit" required>
+          </label>
+          <label>
+            <span>Contact Number <abbr class="required-star" title="required">*</abbr></span>
+            <input type="tel" name="contact" placeholder="98XXXXXX79" inputmode="tel" required>
+          </label>
+          <label>
+            <span>E-mail Id</span>
+            <input type="email" name="email" placeholder="example@email.com">
+          </label>
+          <button type="submit">Book My Free Visit</button>
+          <p class="form-status" data-form-status aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <section class="hero">
+      <picture class="section-bg hero-media">
+        <source media="(max-width: 560px)" srcset="assets/images/hero_phn.webp">
+        <img src="assets/images/hero_2.webp" alt="Bhutani Cyberthum towers aerial view">
+      </picture>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Bhutani <br>Cyberthum</h1>
+          <h3 class="hero-sub-head">Sector 140-A, Noida</h3>
+          <p>Bhutani Cyberthum in Sector 140A, Noida, is a 26.8-acre mixed-use development featuring twin 46-storey towers, high-street retail, and specialized co-working spaces</p>
+        </div>
+
+        <form class="lead-form" action="api/send-lead.php" method="post" data-lead-form>
+          <input type="hidden" name="lead_type" value="site_visit">
+          <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off">
+          <label>
+            <span>Name <abbr class="required-star" title="required">*</abbr></span>
+            <input type="text" name="name" placeholder="Akshat Dixit" required>
+          </label>
+          <label>
+            <span>Contact Number <abbr class="required-star" title="required">*</abbr></span>
+            <input type="tel" name="contact" placeholder="9800000079" inputmode="tel" required>
+          </label>
+          <label>
+            <span>E-mail Id</span>
+            <input type="email" name="email" placeholder="example@email.com">
+          </label>
+          <button type="submit">Book My Free Visit</button>
+          <p class="form-status" data-form-status aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section highlights" id="highlights">
+      <div class="container">
+        <h2>Project Highlights</h2>
+
+        <div class="highlight-row">
+          <div class="highlight-text">
+            <p>Located at Noida's Prime Sector-140A.</p>
+            <p>27 Acres Massive Land Area.</p>
+            <p>North India's Tallest Iconic Twin Towers.</p>
+            <p>3 Sides Open Corner Plot.</p>
+          </div>
+          <img class="highlight-media" src="assets/images/highlight_1.webp" alt="Glass facade and sphere feature">
+        </div>
+
+        <div class="highlight-row reverse">
+          <img class="highlight-media" src="assets/images/highlight_2.webp" alt="Cyberthum twin towers aerial render">
+          <div class="highlight-text">
+            <p>2 Minutes Walkable to Sector-137 Metro.</p>
+            <p>30 Minutes Drive to Jewar Airport.</p>
+            <p>10 Minutes Drive to Pari Chowk.</p>
+            <p>Next to Infosys &amp; Samsung Campus.</p>
+          </div>
+        </div>
+
+        <div class="highlight-row">
+          <div class="highlight-text">
+            <p>Part of the Largest IT/ITES Hub.</p>
+            <p>India's Largest Musical Fountain.</p>
+            <p>Surrounded by 1 Lakh+ Ready Apartments.</p>
+            <p>Bang on Noida-Greater Noida Expressway.</p>
+          </div>
+          <img class="highlight-media" src="assets/images/highlight_3.webp" alt="Cyberthum towers exterior view">
+        </div>
+      </div>
+    </section>
+
+    <section class="section video-section" id="video">
+      <div class="container">
+        <h2>Project Video</h2>
+        <button class="video-box" type="button" aria-label="Play Cyberthum project video" data-video-open>
+          <img src="assets/images/video thumbalin.webp" alt="Cyberthum project video thumbnail">
+          <span class="play-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <div class="video-modal" data-video-modal aria-hidden="true">
+      <button class="video-modal__backdrop" type="button" aria-label="Close video" data-video-close></button>
+      <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-label="Cyberthum walkthrough video">
+        <button class="video-modal__close" type="button" aria-label="Close video" data-video-close><img src="assets/images/icon-close.svg" alt=""></button>
+        <iframe
+          data-video-frame
+          width="1335"
+          height="751"
+          title="Cyberthum by Bhutani-WalkThrough Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <h2>Project Gallery</h2>
+        <div class="gallery-grid">
+          <button class="gallery-button" type="button" data-gallery-open="assets/images/Gallery_1.webp" aria-label="View Cyberthum aerial gallery image">
+            <img class="gallery-item" src="assets/images/Gallery_1.webp" alt="Cyberthum aerial gallery view">
+          </button>
+          <button class="gallery-button" type="button" data-gallery-open="assets/images/Gallery_2.webp" aria-label="View Cyberthum boulevard gallery image">
+            <img class="gallery-item" src="assets/images/Gallery_2.webp" alt="Cyberthum boulevard gallery view">
+          </button>
+          <button class="gallery-button" type="button" data-gallery-open="assets/images/Gallery_3.webp" aria-label="View Cyberthum fountain gallery image">
+            <img class="gallery-item" src="assets/images/Gallery_3.webp" alt="Cyberthum fountain gallery view">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="gallery-modal" data-gallery-modal aria-hidden="true">
+      <button class="gallery-modal__backdrop" type="button" aria-label="Close gallery image" data-gallery-close></button>
+      <div class="gallery-modal__dialog" role="dialog" aria-modal="true" aria-label="Gallery image preview">
+        <button class="gallery-modal__close" type="button" aria-label="Close gallery image" data-gallery-close><img src="assets/images/icon-close.svg" alt=""></button>
+        <img data-gallery-frame src="" alt="">
+      </div>
+    </div>
+
+    <section class="section downloads" id="downloads">
+      <div class="container">
+        <h2>Downloads</h2>
+
+        <div class="download-grid">
+          <article class="download-card">
+            <img class="download-cover" src="assets/images/Brochure_cover.webp" alt="Bhutani Cyberthum brochure cover">
+            <a href="#" class="download-button" data-visit-open data-visit-heading="Download Brochure Now!" data-visit-type="brochure">Download Brochure Now</a>
+          </article>
+
+          <article class="download-card">
+            <img class="download-cover" src="assets/images/Floorplan_cover.webp" alt="Bhutani Cyberthum floor plan cover">
+            <a href="#" class="download-button" data-visit-open data-visit-heading="Download Floor Plan Now!" data-visit-type="floor_plan">Download Floor Plan Now</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+
+        <div class="contact-panel">
+          <picture class="section-bg contact-media">
+            <source media="(max-width: 1100px)" srcset="assets/images/Contact_us_tab_phn.webp">
+            <img src="assets/images/Contact_us.webp" alt="Bhutani Cyberthum contact background">
+          </picture>
+          <!-- <div class="contact-shade"></div> -->
+
+          <div class="contact-copy">
+            <div class="logo logo-light">
+              <img src="assets/images/logo.svg" alt="Bhutani Infra Innovation">
+            </div>
+            <h3>Bhutani Cyberthum</h3>
+            <div class="contact-detail"><img src="assets/images/icon-location.svg" alt="Loaction Icon"><p> Sector 140-A, Noida</p></div>
+            <div class="contact-detail"><img src="assets/images/icon-call.svg" alt="Contact Icon"><p>9810198351, 9605970555</p></div>
+            <p class="contact-description">
+              Bhutani Cyberthum in Sector 140A, Noida, is a 26.8-acre mixed-use development featuring twin 46-story towers, high-street retail, and specialized co-working spaces.
+            </p>
+          </div>
+
+          <form class="lead-form contact-form" action="api/send-lead.php" method="post" data-lead-form>
+            <input type="hidden" name="lead_type" value="contact">
+            <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off">
+            <h3>Book Your<br>Visit Today</h3>
+            <label>
+              <span>Name <abbr class="required-star" title="required">*</abbr></span>
+              <input type="text" name="name" placeholder="Akshat Dixit" required>
+            </label>
+            <label>
+              <span>Contact Number <abbr class="required-star" title="required">*</abbr></span>
+              <input type="tel" name="contact" placeholder="9800000079" inputmode="tel" required>
+            </label>
+            <label>
+              <span>E-mail Id</span>
+              <input type="email" name="email" placeholder="example@email.com">
+            </label>
+            <button type="submit">Book My Free Visit</button>
+            <p class="form-status" data-form-status aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>All rights are reserved @ Domain.com</p>
+  </footer>
+
+  <div class="floating-actions" aria-label="Quick contact actions">
+    <a class="floating-action" href="tel:9810109851" aria-label="Call 9810109851">
+      <img src="assets/images/Icon-call-hover2.svg" alt="">
+    </a>
+    <a class="floating-action" href="https://wa.me/919810109851" target="_blank" rel="noopener" aria-label="WhatsApp 9810109851">
+      <img src="assets/images/Icon-whatsapp-hover2.svg" alt="">
+    </a>
+  </div>
+
+  <script>
+    const videoModal = document.querySelector('[data-video-modal]');
+    const videoFrame = document.querySelector('[data-video-frame]');
+    const videoOpen = document.querySelector('[data-video-open]');
+    const videoCloseButtons = document.querySelectorAll('[data-video-close]');
+    const videoUrl = 'https://www.youtube.com/embed/XiQ1rb2OikE?autoplay=1&rel=0';
+    const galleryModal = document.querySelector('[data-gallery-modal]');
+    const galleryFrame = document.querySelector('[data-gallery-frame]');
+    const galleryOpenButtons = document.querySelectorAll('[data-gallery-open]');
+    const galleryCloseButtons = document.querySelectorAll('[data-gallery-close]');
+    const visitModal = document.querySelector('[data-visit-modal]');
+    const visitHeading = document.querySelector('[data-visit-title]');
+    const visitOpenButtons = document.querySelectorAll('[data-visit-open]');
+    const visitCloseButtons = document.querySelectorAll('[data-visit-close]');
+    const visitLeadType = document.querySelector('[data-lead-type]');
+    const leadForms = document.querySelectorAll('[data-lead-form]');
+    const indianContactPattern = /^(?:\+91|91)?[6-9]\d{9}$/;
+    const modalTransitionMs = 220;
+    let videoCloseTimer;
+    let galleryCloseTimer;
+
+    function updateModalLock() {
+      const hasOpenModal =
+        videoModal.getAttribute('aria-hidden') === 'false' ||
+        galleryModal.getAttribute('aria-hidden') === 'false' ||
+        visitModal.getAttribute('aria-hidden') === 'false';
+
+      document.body.classList.toggle('modal-open', hasOpenModal);
+    }
+
+    function openVideo() {
+      clearTimeout(videoCloseTimer);
+      videoFrame.src = videoUrl;
+      videoModal.setAttribute('aria-hidden', 'false');
+      updateModalLock();
+    }
+
+    function closeVideo() {
+      videoModal.setAttribute('aria-hidden', 'true');
+      updateModalLock();
+      videoCloseTimer = setTimeout(() => {
+        videoFrame.src = '';
+      }, modalTransitionMs);
+    }
+
+    function openGallery(button) {
+      const image = button.querySelector('img');
+      clearTimeout(galleryCloseTimer);
+      galleryFrame.src = button.dataset.galleryOpen;
+      galleryFrame.alt = image.alt;
+      galleryModal.setAttribute('aria-hidden', 'false');
+      updateModalLock();
+    }
+
+    function closeGallery() {
+      galleryModal.setAttribute('aria-hidden', 'true');
+      updateModalLock();
+      galleryCloseTimer = setTimeout(() => {
+        galleryFrame.src = '';
+        galleryFrame.alt = '';
+      }, modalTransitionMs);
+    }
+
+    function openVisit(event, button) {
+      event.preventDefault();
+      visitHeading.innerHTML = button.dataset.visitHeading;
+      visitLeadType.value = button.dataset.visitType || 'site_visit';
+      const status = visitModal.querySelector('[data-form-status]');
+      status.textContent = '';
+      status.classList.remove('is-error', 'is-success');
+      visitModal.setAttribute('aria-hidden', 'false');
+      updateModalLock();
+    }
+
+    function closeVisit() {
+      visitModal.setAttribute('aria-hidden', 'true');
+      updateModalLock();
+    }
+
+    videoOpen.addEventListener('click', openVideo);
+    videoCloseButtons.forEach((button) => button.addEventListener('click', closeVideo));
+    galleryOpenButtons.forEach((button) => button.addEventListener('click', () => openGallery(button)));
+    galleryCloseButtons.forEach((button) => button.addEventListener('click', closeGallery));
+    visitOpenButtons.forEach((button) => button.addEventListener('click', (event) => openVisit(event, button)));
+    visitCloseButtons.forEach((button) => button.addEventListener('click', closeVisit));
+    leadForms.forEach((form) => {
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const status = form.querySelector('[data-form-status]');
+        const submitButton = form.querySelector('button[type="submit"]');
+        const defaultButtonText = submitButton.textContent;
+
+        status.textContent = '';
+        status.classList.remove('is-error', 'is-success');
+
+        const contactInput = form.querySelector('[name="contact"]');
+        const normalizedContact = contactInput.value.replace(/[\s-]/g, '');
+
+        if (!indianContactPattern.test(normalizedContact)) {
+          status.textContent = 'Please enter a valid Indian number.';
+          status.classList.add('is-error');
+          contactInput.focus();
+          return;
+        }
+
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+          });
+          const result = await response.json();
+
+          status.textContent = result.message;
+          status.classList.add(result.ok ? 'is-success' : 'is-error');
+
+          if (result.ok) {
+            form.reset();
+            window.location.href = 'thankyou.html';
+          }
+        } catch (error) {
+          status.textContent = 'Unable to send your details right now. Please try again later.';
+          status.classList.add('is-error');
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = defaultButtonText;
+        }
+      });
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && videoModal.getAttribute('aria-hidden') === 'false') {
+        closeVideo();
+      }
+
+      if (event.key === 'Escape' && galleryModal.getAttribute('aria-hidden') === 'false') {
+        closeGallery();
+      }
+
+      if (event.key === 'Escape' && visitModal.getAttribute('aria-hidden') === 'false') {
+        closeVisit();
+      }
+    });
+  </script>
+</body>
+</html>
