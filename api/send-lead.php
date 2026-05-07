@@ -109,7 +109,7 @@ try {
     $mail->SMTPSecure = $config['smtp_secure'];
     $mail->Port = $config['smtp_port'];
 
-    $mail->setFrom($config['smtp_user'], 'Bhutani Cyberthum Website');
+    $mail->setFrom($config['smtp_user'], 'Onyx Splendor');
     $mail->addAddress($config['mail_to'], $config['mail_to_name']);
 
     if ($email !== '') {

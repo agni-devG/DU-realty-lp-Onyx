@@ -6,6 +6,6 @@ return [
     'smtp_user' => 'your-email@gmail.com',
     'smtp_pass' => 'your-gmail-app-password',
     'smtp_secure' => 'tls',
-    'mail_to' => 'destination@example.com',
-    'mail_to_name' => 'Bhutani Cyberthum',
+    'mail_to' => '919605970555@beepmate.io',
+    'mail_to_name' => 'Onyx',
 ];
